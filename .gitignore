@@ -1,0 +1,4 @@
+*.html
+!index.html
+!404.html
+.DS_Store
