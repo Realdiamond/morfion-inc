@@ -159,10 +159,10 @@
         </div>
 
         <!-- Service Cards Grid -->
-        <div class="services-grid">
+        <div class="services-slider-container">
+          <div class="services-grid" id="svc-slider">
 
           <div class="svc-card fade-up">
-            <div class="svc-card__num">01</div>
             <div class="svc-card__icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
             </div>
@@ -172,7 +172,6 @@
           </div>
 
           <div class="svc-card fade-up">
-            <div class="svc-card__num">02</div>
             <div class="svc-card__icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35M11 8v3m0 0v3m0-3h3m-3 0H8"/></svg>
             </div>
@@ -182,7 +181,6 @@
           </div>
 
           <div class="svc-card fade-up">
-            <div class="svc-card__num">03</div>
             <div class="svc-card__icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2V9M9 21H5a2 2 0 0 1-2-2V9m0 0h18"/></svg>
             </div>
@@ -192,7 +190,6 @@
           </div>
 
           <div class="svc-card fade-up">
-            <div class="svc-card__num">04</div>
             <div class="svc-card__icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
             </div>
@@ -202,7 +199,6 @@
           </div>
 
           <div class="svc-card fade-up">
-            <div class="svc-card__num">05</div>
             <div class="svc-card__icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/></svg>
             </div>
@@ -212,7 +208,6 @@
           </div>
 
           <div class="svc-card fade-up">
-            <div class="svc-card__num">06</div>
             <div class="svc-card__icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
             </div>
@@ -222,7 +217,6 @@
           </div>
 
           <div class="svc-card fade-up">
-            <div class="svc-card__num">07</div>
             <div class="svc-card__icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
             </div>
@@ -232,7 +226,6 @@
           </div>
 
           <div class="svc-card fade-up">
-            <div class="svc-card__num">08</div>
             <div class="svc-card__icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
             </div>
@@ -240,7 +233,16 @@
             <p>Additive manufacture of complex ceramic geometries with precise dimensional and microstructural control.</p>
             <a href="services.html" class="svc-card__link">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
           </div>
-
+          </div>
+        
+          <div class="services-slider-controls">
+            <button class="slider-btn" id="svc-prev" aria-label="Previous slide">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+            </button>
+            <button class="slider-btn" id="svc-next" aria-label="Next slide">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+            </button>
+          </div>
         </div>
 
         <!-- Footer CTA -->
@@ -273,80 +275,80 @@
         <div class="ind-grid">
 
           <div class="ind-card fade-up">
-            <div class="ind-card__icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+            <img src="https://images.pexels.com/photos/159397/solar-panel-array-power-sun-electricity-159397.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Energy" class="ind-card__img" />
+            <div class="ind-card__content">
+              <div class="ind-card__body">
+                <h3>Energy</h3>
+                <p>Generation and storage systems requiring extreme thermal stability.</p>
+              </div>
+              <svg class="ind-card__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </div>
-            <div class="ind-card__body">
-              <h3>Energy</h3>
-              <p>Generation and storage systems requiring extreme thermal stability.</p>
-            </div>
-            <svg class="ind-card__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </div>
 
           <div class="ind-card fade-up">
-            <div class="ind-card__icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+            <img src="https://images.pexels.com/photos/2582937/pexels-photo-2582937.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Semiconductors" class="ind-card__img" />
+            <div class="ind-card__content">
+              <div class="ind-card__body">
+                <h3>Semiconductors</h3>
+                <p>Electronics and substrate materials with ultra-tight tolerances.</p>
+              </div>
+              <svg class="ind-card__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </div>
-            <div class="ind-card__body">
-              <h3>Semiconductors</h3>
-              <p>Electronics and substrate materials with ultra-tight tolerances.</p>
-            </div>
-            <svg class="ind-card__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </div>
 
           <div class="ind-card fade-up">
-            <div class="ind-card__icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+            <img src="https://images.pexels.com/photos/733475/pexels-photo-733475.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Aerospace & Defense" class="ind-card__img" />
+            <div class="ind-card__content">
+              <div class="ind-card__body">
+                <h3>Aerospace &amp; Defense</h3>
+                <p>High-temperature and structural ceramics for critical flight applications.</p>
+              </div>
+              <svg class="ind-card__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </div>
-            <div class="ind-card__body">
-              <h3>Aerospace &amp; Defense</h3>
-              <p>High-temperature and structural ceramics for critical flight applications.</p>
-            </div>
-            <svg class="ind-card__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </div>
 
           <div class="ind-card fade-up">
-            <div class="ind-card__icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+            <img src="https://images.pexels.com/photos/1476318/pexels-photo-1476318.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Industrial Manufacturing" class="ind-card__img" />
+            <div class="ind-card__content">
+              <div class="ind-card__body">
+                <h3>Industrial Manufacturing</h3>
+                <p>Wear parts and process components engineered for longevity.</p>
+              </div>
+              <svg class="ind-card__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </div>
-            <div class="ind-card__body">
-              <h3>Industrial Manufacturing</h3>
-              <p>Wear parts and process components engineered for longevity.</p>
-            </div>
-            <svg class="ind-card__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </div>
 
           <div class="ind-card fade-up">
-            <div class="ind-card__icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M8.56 2.9A7 7 0 0 1 19.1 15.44"/><path d="M17 17H3a5 5 0 0 1 3.46-4.77"/><path d="m3 3 18 18"/></svg>
+            <img src="https://images.pexels.com/photos/2280571/pexels-photo-2280571.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Chemical Processing" class="ind-card__img" />
+            <div class="ind-card__content">
+              <div class="ind-card__body">
+                <h3>Chemical Processing</h3>
+                <p>Corrosion-resistant ceramic solutions for harsh chemical environments.</p>
+              </div>
+              <svg class="ind-card__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </div>
-            <div class="ind-card__body">
-              <h3>Chemical Processing</h3>
-              <p>Corrosion-resistant ceramic solutions for harsh chemical environments.</p>
-            </div>
-            <svg class="ind-card__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </div>
 
           <div class="ind-card fade-up">
-            <div class="ind-card__icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+            <img src="https://images.pexels.com/photos/3844581/pexels-photo-3844581.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Medical & Bioceramics" class="ind-card__img" />
+            <div class="ind-card__content">
+              <div class="ind-card__body">
+                <h3>Medical &amp; Bioceramics</h3>
+                <p>Biocompatible ceramic implants and medical device components.</p>
+              </div>
+              <svg class="ind-card__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </div>
-            <div class="ind-card__body">
-              <h3>Medical &amp; Bioceramics</h3>
-              <p>Biocompatible ceramic implants and medical device components.</p>
-            </div>
-            <svg class="ind-card__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </div>
 
           <div class="ind-card fade-up">
-            <div class="ind-card__icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M2.27 21.7s9.87-3.5 12.73-6.36a4.5 4.5 0 0 0-6.36-6.37C5.77 11.84 2.27 21.7 2.27 21.7zM15.42 15.42l4.24 4.24"/></svg>
+            <img src="https://images.pexels.com/photos/414837/pexels-photo-414837.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Environmental" class="ind-card__img" />
+            <div class="ind-card__content">
+              <div class="ind-card__body">
+                <h3>Environmental</h3>
+                <p>Filtration and environmental ceramics for clean process streams.</p>
+              </div>
+              <svg class="ind-card__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </div>
-            <div class="ind-card__body">
-              <h3>Environmental</h3>
-              <p>Filtration and environmental ceramics for clean process streams.</p>
-            </div>
-            <svg class="ind-card__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </div>
 
           <!-- Highlight CTA card -->
@@ -368,6 +370,24 @@
           <a href="industries.html" class="btn btn-outline">View All Industries</a>
         </div>
 
+      </div>
+    </section>
+
+    <!-- ============================
+         VIDEO SHOWCASE
+         ============================ -->
+    <section class="section video-showcase" aria-labelledby="video-showcase-title">
+      <div class="container">
+        <div class="video-showcase__header fade-up">
+          <span class="section-label">Our Process in Action</span>
+          <div class="accent-line"></div>
+          <h2 id="video-showcase-title">Advanced Manufacturing <br>and Testing Facilities</h2>
+        </div>
+        <div class="video-showcase__wrapper fade-up">
+          <video class="video-showcase__video" autoplay loop muted playsinline>
+            <source src="hero-video.mp4" type="video/mp4">
+          </video>
+        </div>
       </div>
     </section>
 

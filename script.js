@@ -103,4 +103,19 @@
     card.style.transitionDelay = `${i * 60}ms`;
   });
 
+  /* ---- Services Slider ---- */
+  const svcSlider = document.getElementById('svc-slider');
+  const svcPrev = document.getElementById('svc-prev');
+  const svcNext = document.getElementById('svc-next');
+  if (svcSlider && svcPrev && svcNext) {
+    svcNext.addEventListener('click', () => {
+      const scrollAmount = svcSlider.clientWidth;
+      svcSlider.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+    });
+    svcPrev.addEventListener('click', () => {
+      const scrollAmount = svcSlider.clientWidth;
+      svcSlider.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+    });
+  }
+
 })();
