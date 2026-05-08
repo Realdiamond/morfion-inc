@@ -3,54 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Page Not Found — Morfion Materials Inc</title>
-  <meta name="description" content="The page you are looking for does not exist." />
+  <title>Ceramic 3D Printing: When It Actually Wins — Morfion Materials Inc</title>
+  <meta name="description" content="Where ceramic additive manufacturing outperforms conventional forming and when it does not." />
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%230A1628'/><text y='24' x='4' font-size='20' fill='%2322C55E' font-family='sans-serif' font-weight='bold'>M</text></svg>" />
-  <style>
-    .not-found {
-      min-height: 70vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      background: var(--brand-light);
-      padding: 120px 20px;
-    }
-    .not-found__inner {
-      max-width: 600px;
-    }
-    .not-found h1 {
-      font-size: clamp(4rem, 8vw, 6rem);
-      margin-bottom: 1rem;
-      color: var(--brand-primary);
-      line-height: 1;
-    }
-    .not-found h1 span {
-      color: var(--brand-secondary);
-    }
-    .not-found h2 {
-      font-size: clamp(1.5rem, 3vw, 2rem);
-      margin-bottom: 1.5rem;
-      color: var(--grey-dark);
-    }
-    .not-found p {
-      margin-bottom: 2.5rem;
-      font-size: 1.1rem;
-    }
-    .not-found .btn-group {
-      display: flex;
-      gap: 1rem;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-  </style>
 </head>
 <body>
 
-  <!-- ============================
-       NAVIGATION
-       ============================ -->
+  <!-- NAVIGATION -->
   <header id="navbar" class="navbar" role="banner">
     <div class="navbar__inner">
       <a href="index.html" class="navbar__logo" aria-label="Morfion Materials Inc Home">
@@ -70,8 +30,6 @@
       </button>
     </div>
   </header>
-
-  <!-- Mobile Menu -->
   <nav id="mobile-menu" class="mobile-menu" aria-label="Mobile navigation">
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
@@ -79,29 +37,85 @@
     <a href="industries.html">Industries</a>
     <a href="blogs.html">Blog</a>
     <a href="contact.html">Contact</a>
-    <a href="contact.html" class="btn btn-primary" style="text-align: center; margin-top: .5rem;">Request Consultation</a>
+    <a href="contact.html" class="btn btn-primary mt-2" style="text-align:center;">Request Consultation</a>
   </nav>
 
   <main id="main-content">
-    <section class="not-found">
-      <div class="not-found__inner fade-up">
-        <h1>404<span>.</span></h1>
-        <h2>Page Not Found</h2>
-        <p>The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.</p>
-        <div class="btn-group">
-          <a href="index.html" class="btn btn-primary">Return to Homepage</a>
-          <a href="contact.html" class="btn btn-outline-dark">Contact Support</a>
+
+    <section class="page-hero" aria-label="Blog hero">
+      <div class="container">
+        <span class="section-label">Additive</span>
+        <h1>Ceramic 3D Printing: When It Actually Wins</h1>
+        <p>Use additive manufacturing when geometry or iteration speed is the real constraint.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="blog-post">
+          <div class="blog-post__meta">
+            <span>May 2026</span>
+            <span>5 min read</span>
+            <span>Additive</span>
+          </div>
+          <div class="blog-post__content">
+            <p>Ceramic additive manufacturing is not a universal replacement for pressing or casting. It is a strategic tool for complex geometry, fast iteration, and low-volume precision components.</p>
+            <h2>1. Geometry drives the decision</h2>
+            <p>Internal channels, lattice structures, and undercuts can make additive the only viable route.</p>
+            <h2>2. Iterate fast, then qualify</h2>
+            <p>AM shortens prototype cycles, but qualification still depends on repeatable microstructure and validation testing.</p>
+            <h2>3. Select the right process</h2>
+            <p>DLP, extrusion, and binder-based approaches each have different surface and density outcomes. Match the method to the application.</p>
+            <h2>4. Plan for post-processing</h2>
+            <p>Debinding and sintering profiles matter as much as the print itself. We treat the whole process as one system.</p>
+          </div>
+
+          <div class="blog-related">
+            <div class="text-center mb-4">
+              <span class="section-label">Related</span>
+              <div class="accent-line"></div>
+              <h2>More Reading</h2>
+            </div>
+            <div class="blog-grid">
+              <article class="blog-card">
+                <div class="blog-card__media" style="background-image:url('https://images.pexels.com/photos/256381/pexels-photo-256381.jpeg?auto=compress&cs=tinysrgb&w=1200'); background-size:cover; background-position:center;"></div>
+                <div class="blog-card__body">
+                  <div class="blog-card__meta">
+                    <span>Materials AI</span>
+                    <span>May 2026</span>
+                  </div>
+                  <h3>How AI Shortens Ceramic Development Cycles</h3>
+                  <a href="blog-ai-materials.html" class="btn btn-outline-dark">Read Article</a>
+                </div>
+              </article>
+              <article class="blog-card">
+                <div class="blog-card__media" style="background-image:url('https://images.pexels.com/photos/256262/pexels-photo-256262.jpeg?auto=compress&cs=tinysrgb&w=1200'); background-size:cover; background-position:center;"></div>
+                <div class="blog-card__body">
+                  <div class="blog-card__meta">
+                    <span>Failure Analysis</span>
+                    <span>May 2026</span>
+                  </div>
+                  <h3>Failure Analysis in Advanced Ceramics: A Clear Workflow</h3>
+                  <a href="blog-failure-analysis-workflow.html" class="btn btn-outline-dark">Read Article</a>
+                </div>
+              </article>
+            </div>
+          </div>
         </div>
       </div>
     </section>
+
   </main>
 
-  <!-- ============================
-       FOOTER
-       ============================ -->
+  <!-- FOOTER -->
   <footer class="footer" role="contentinfo">
+
+    <!-- Top accent stripe -->
     <div class="footer__top-accent" aria-hidden="true"></div>
+
     <div class="container">
+
+      <!-- Trust indicator strip -->
       <div class="footer__trust-strip">
         <span class="footer__trust-item">
           <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
@@ -124,7 +138,10 @@
         </span>
       </div>
 
+      <!-- Main 4-column grid -->
       <div class="footer__grid">
+
+        <!-- Brand column -->
         <div class="footer__brand">
           <a href="index.html" class="footer__logo-link" aria-label="Morfion Materials Inc Home">
             <img src="MORFION.png" alt="Morfion Materials Inc" class="footer__logo-img" />
@@ -137,6 +154,7 @@
           </div>
         </div>
 
+        <!-- Services column -->
         <div>
           <div class="footer__heading">Services</div>
           <ul class="footer__links">
@@ -149,6 +167,7 @@
           </ul>
         </div>
 
+        <!-- Company column -->
         <div>
           <div class="footer__heading">Company</div>
           <ul class="footer__links">
@@ -160,6 +179,7 @@
           </ul>
         </div>
 
+        <!-- Contact column -->
         <div>
           <div class="footer__heading">Get in Touch</div>
           <ul class="footer__links footer__links--contact">
@@ -177,8 +197,10 @@
             <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </a>
         </div>
+
       </div>
 
+      <!-- Bottom bar -->
       <div class="footer__bottom">
         <p>&copy; 2025 Morfion Materials Inc. All rights reserved.</p>
         <p class="footer__bottom-tagline">Precision Ceramic Engineering</p>
@@ -187,6 +209,7 @@
           <a href="terms.html">Terms of Use</a>
         </div>
       </div>
+
     </div>
   </footer>
 

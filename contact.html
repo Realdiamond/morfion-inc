@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Morfion Materials Inc</title>
+  <meta name="description" content="Contact Morfion Materials Inc to request a consultation with our ceramic engineering team. We serve aerospace, energy, medical, semiconductor, and industrial sectors." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%230A1628'/><text y='24' x='4' font-size='20' fill='%2322C55E' font-family='sans-serif' font-weight='bold'>M</text></svg>" />
+  <style>
+    .contact-grid {
+      display: grid; grid-template-columns: 1.2fr 1fr; gap: 2.5rem;
+      align-items: start;
+    }
+    @media (max-width: 768px) {
+      .contact-grid { grid-template-columns: 1fr; }
+    }
+    .trust-badges {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem;
+      margin-top: 2rem;
+    }
+    .trust-badge {
+      background: var(--brand-light); border-radius: var(--radius-sm);
+      padding: 1.25rem; text-align: center;
+    }
+    .trust-badge h4 { font-size: .85rem; color: var(--brand-primary); margin-bottom: .2rem; }
+    .trust-badge p { font-size: .78rem; color: var(--grey-mid); }
+
+    .divider-label {
+      display: flex; align-items: center; gap: 1rem; margin: 1.5rem 0;
+    }
+    .divider-label hr { flex: 1; border: none; border-top: 1px solid var(--border); }
+    .divider-label span {
+      font-size: .75rem; font-family: 'Montserrat',sans-serif;
+      font-weight: 700; color: var(--grey-mid); letter-spacing: .08em;
+      text-transform: uppercase; white-space: nowrap;
+    }
+
+    @media (max-width: 480px) {
+      .trust-badges { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <header id="navbar" class="navbar" role="banner">
+    <div class="navbar__inner">
+      <a href="index.html" class="navbar__logo" aria-label="Morfion Materials Inc Home">
+        <img src="MORFION.png" alt="Morfion Materials Inc" class="navbar__logo-img" />
+      </a>
+      <nav class="navbar__nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="industries.html">Industries</a>
+        <a href="blogs.html">Blog</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <a href="contact.html" class="btn btn-primary navbar__cta">Request Consultation</a>
+      <button id="hamburger" class="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+  <nav id="mobile-menu" class="mobile-menu" aria-label="Mobile navigation">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="industries.html">Industries</a>
+    <a href="blogs.html">Blog</a>
+    <a href="contact.html">Contact</a>
+    <a href="contact.html" class="btn btn-primary mt-2" style="text-align:center;">Request Consultation</a>
+  </nav>
+
+  <main id="main-content">
+
+    <!-- PAGE HERO -->
+    <section class="page-hero" aria-label="Contact page hero">
+      <div class="container">
+        <span class="section-label">Get In Touch</span>
+        <h1>Let's Talk Engineering</h1>
+        <p>Our ceramic engineering team is ready to assist. Describe your challenge and we'll respond within one business day with a clear path forward.</p>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="section" aria-labelledby="contact-form-title">
+      <div class="container">
+        <div class="contact-grid">
+
+          <!-- CONTACT FORM -->
+          <div class="fade-up">
+            <span class="section-label">Send a Message</span>
+            <div class="accent-line"></div>
+            <h2 id="contact-form-title" class="section-title" style="margin-bottom:1.5rem;">Request a Consultation</h2>
+            <p style="margin-bottom:2rem;">
+              Fill out the form below and a member of our engineering team will follow up within one business day to discuss your project in detail.
+            </p>
+            <div class="contact-form">
+              <form id="contact-form" novalidate>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="first-name">First Name *</label>
+                    <input type="text" id="first-name" name="first_name" placeholder="James" required />
+                  </div>
+                  <div class="form-group">
+                    <label for="last-name">Last Name *</label>
+                    <input type="text" id="last-name" name="last_name" placeholder="Hartley" required />
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="email">Business Email *</label>
+                  <input type="email" id="email" name="email" placeholder="j.hartley@company.com" required />
+                </div>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="company">Company / Organization *</label>
+                    <input type="text" id="company" name="company" placeholder="Aerospace Dynamics Ltd." required />
+                  </div>
+                  <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="+1 (555) 000-0000" />
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="service">Service Area of Interest *</label>
+                  <select id="service" name="service" required>
+                    <option value="" disabled selected>Select a service…</option>
+                    <option value="aiml">AI/ML Materials Development</option>
+                    <option value="failure">Failure Analysis &amp; Root-Cause Diagnostics</option>
+                    <option value="testing">Materials Testing &amp; Validation</option>
+                    <option value="characterization">Materials Characterization</option>
+                    <option value="development">Materials Development</option>
+                    <option value="selection">Materials Selection</option>
+                    <option value="optimization">Process &amp; Product Optimization</option>
+                    <option value="printing">Ceramic 3D Printing</option>
+                    <option value="multiple">Multiple Services / Not Sure</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="industry">Industry</label>
+                  <select id="industry" name="industry">
+                    <option value="" disabled selected>Select your industry…</option>
+                    <option value="energy">Energy Generation &amp; Storage</option>
+                    <option value="semiconductor">Semiconductors &amp; Electronics</option>
+                    <option value="aerospace">Aerospace &amp; Defense</option>
+                    <option value="industrial">Industrial Manufacturing</option>
+                    <option value="chemical">Chemical Processing</option>
+                    <option value="medical">Medical &amp; Bioceramics</option>
+                    <option value="environmental">Environmental</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="message">Project Description *</label>
+                  <textarea id="message" name="message" placeholder="Briefly describe your materials challenge, application requirements, or the question you need answered…" required></textarea>
+                </div>
+                <div class="form-group" style="margin-bottom:0;">
+                  <button type="submit" id="submit-btn" class="btn btn-primary w-full" style="justify-content:center; padding:1rem; font-size:.95rem;">
+                    Send Message
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                  </button>
+                </div>
+              </form>
+            </div>
+
+            <!-- Trust Badges -->
+            <div class="trust-badges">
+              <div class="trust-badge">
+                <h4>1 Business Day</h4>
+                <p>Response time guarantee</p>
+              </div>
+              <div class="trust-badge">
+                <h4>No Obligation</h4>
+                <p>Free initial consultation</p>
+              </div>
+              <div class="trust-badge">
+                <h4>NDA Available</h4>
+                <p>Confidential by default</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- CONTACT INFO -->
+          <div class="fade-up">
+            <div class="contact-info-card">
+              <h3>Contact Information</h3>
+              <p>Reach our engineering team directly via any of the channels below.</p>
+
+              <div class="info-item">
+                <div class="info-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2D6EF5" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                </div>
+                <div>
+                  <h4>Email</h4>
+                  <p><a href="mailto:info@morfionmaterials.com" style="color:#fff;">info@morfionmaterials.com</a></p>
+                </div>
+              </div>
+
+              <div class="info-item">
+                <div class="info-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2D6EF5" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.4 2 2 0 0 1 3.6 1.22h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 9a16 16 0 0 0 6 6l.92-.92a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                </div>
+                <div>
+                  <h4>Phone</h4>
+                  <p>+1 (000) 000-0000</p>
+                </div>
+              </div>
+
+              <div class="info-item">
+                <div class="info-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2D6EF5" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                </div>
+                <div>
+                  <h4>Location</h4>
+                  <p>Canada &amp; Remote Worldwide</p>
+                </div>
+              </div>
+
+              <div class="info-item">
+                <div class="info-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2D6EF5" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                </div>
+                <div>
+                  <h4>Business Hours</h4>
+                  <p>Monday – Friday, 9:00 AM – 6:00 PM EST</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- What to Expect -->
+            <div class="card mt-3">
+              <h4 style="margin-bottom:1rem;">What Happens After You Submit</h4>
+              <div class="feature-list">
+                <div class="feature-item">
+                  <div class="feature-icon">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                  </div>
+                  <p style="font-size:.88rem;"><strong style="color:var(--brand-primary);">Confirmation</strong> — You'll receive an acknowledgment email immediately.</p>
+                </div>
+                <div class="feature-item">
+                  <div class="feature-icon">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                  </div>
+                  <p style="font-size:.88rem;"><strong style="color:var(--brand-primary);">Engineering Review</strong> — Our team reviews your project brief within one business day.</p>
+                </div>
+                <div class="feature-item">
+                  <div class="feature-icon">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                  </div>
+                  <p style="font-size:.88rem;"><strong style="color:var(--brand-primary);">Discovery Call</strong> — We schedule a short call to understand your requirements in depth.</p>
+                </div>
+                <div class="feature-item">
+                  <div class="feature-icon">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                  </div>
+                  <p style="font-size:.88rem;"><strong style="color:var(--brand-primary);">Proposal</strong> — We provide a clear scope of work and engagement outline.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Services Quick Links -->
+            <div class="card mt-3">
+              <h4 style="margin-bottom:1rem;">Not Ready to Contact Yet?</h4>
+              <p style="font-size:.9rem; margin-bottom:1rem;">Browse our services and industry pages to learn more about what Morfion offers.</p>
+              <div style="display:flex; gap:.75rem; flex-wrap:wrap;">
+                <a href="services.html" class="btn btn-outline-dark" style="font-size:.8rem; padding:.6rem 1.2rem;">View Services</a>
+                <a href="industries.html" class="btn btn-outline-dark" style="font-size:.8rem; padding:.6rem 1.2rem;">Our Industries</a>
+                <a href="about.html" class="btn btn-outline-dark" style="font-size:.8rem; padding:.6rem 1.2rem;">About Us</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CONSULTATION CTA BANNER -->
+    <section class="section section--grey" aria-labelledby="consultation-cta-title">
+      <div class="container text-center">
+        <span class="section-label">Urgent Requirement?</span>
+        <div class="accent-line"></div>
+        <h2 id="consultation-cta-title">Materials Failure or Critical Deadline?</h2>
+        <p class="section-subtitle" style="margin:1rem auto 2rem;">
+          If you have an urgent failure analysis, time-sensitive testing requirement, or a critical materials decision, contact us directly. We prioritize time-critical engineering needs.
+        </p>
+        <a href="mailto:info@morfionmaterials.com" class="btn btn-primary">
+          Email Us Directly
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer" role="contentinfo">
+
+    <!-- Top accent stripe -->
+    <div class="footer__top-accent" aria-hidden="true"></div>
+
+    <div class="container">
+
+      <!-- Trust indicator strip -->
+      <div class="footer__trust-strip">
+        <span class="footer__trust-item">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          Advanced Ceramics Specialists
+        </span>
+        <span class="footer__trust-sep" aria-hidden="true">·</span>
+        <span class="footer__trust-item">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+          AI/ML Enhanced Workflows
+        </span>
+        <span class="footer__trust-sep" aria-hidden="true">·</span>
+        <span class="footer__trust-item">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+          ISO-Aligned Protocols
+        </span>
+        <span class="footer__trust-sep" aria-hidden="true">·</span>
+        <span class="footer__trust-item">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          7 Industries Served
+        </span>
+      </div>
+
+      <!-- Main 4-column grid -->
+      <div class="footer__grid">
+
+        <!-- Brand column -->
+        <div class="footer__brand">
+          <a href="index.html" class="footer__logo-link" aria-label="Morfion Materials Inc Home">
+            <img src="MORFION.png" alt="Morfion Materials Inc" class="footer__logo-img" />
+          </a>
+          <p class="footer__tagline">Advanced Ceramic Engineering</p>
+          <p class="footer__desc">Expert-level ceramic materials science — from failure analysis to AI-accelerated development — for industries where performance is non-negotiable.</p>
+          <div class="footer__badge">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            Specialist Ceramic Consultancy
+          </div>
+        </div>
+
+        <!-- Services column -->
+        <div>
+          <div class="footer__heading">Services</div>
+          <ul class="footer__links">
+            <li><a href="services.html">AI/ML Materials Development</a></li>
+            <li><a href="services.html">Failure Analysis</a></li>
+            <li><a href="services.html">Materials Testing</a></li>
+            <li><a href="services.html">Characterization</a></li>
+            <li><a href="services.html">Process Optimization</a></li>
+            <li><a href="services.html">Ceramic 3D Printing</a></li>
+          </ul>
+        </div>
+
+        <!-- Company column -->
+        <div>
+          <div class="footer__heading">Company</div>
+          <ul class="footer__links">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Our Services</a></li>
+            <li><a href="industries.html">Industries</a></li>
+            <li><a href="blogs.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact column -->
+        <div>
+          <div class="footer__heading">Get in Touch</div>
+          <ul class="footer__links footer__links--contact">
+            <li>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <a href="mailto:info@morfionmaterials.com">info@morfionmaterials.com</a>
+            </li>
+          </ul>
+          <p class="footer__response">
+            <span class="footer__response-dot"></span>
+            Responds within 1 business day
+          </p>
+          <a href="contact.html" class="footer__cta-btn">
+            Request Consultation
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+
+      </div>
+
+      <!-- Bottom bar -->
+      <div class="footer__bottom">
+        <p>&copy; 2025 Morfion Materials Inc. All rights reserved.</p>
+        <p class="footer__bottom-tagline">Precision Ceramic Engineering</p>
+        <div class="footer__legal">
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="terms.html">Terms of Use</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
