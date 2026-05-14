@@ -176,6 +176,12 @@ p {
   color: var(--brand-highlight);
 }
 
+.grid-1 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
 .grid-2 {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -439,7 +445,7 @@ p {
 .hero__bg-image {
   position: absolute;
   inset: 0;
-  background-image: url('hero-bg.png');
+  background-image: url('hero_bg_new_1778770866040.png');
   background-size: cover;
   background-position: center 40%;
   background-repeat: no-repeat;
