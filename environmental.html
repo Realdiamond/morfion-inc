@@ -11,21 +11,101 @@
 <body>
   <header id="navbar" class="navbar" role="banner">
     <div class="navbar__inner">
-      <a href="index.html" class="navbar__logo"><img src="MORFION.png" alt="Morfion Materials Inc" class="navbar__logo-img" /></a>
-      <nav class="navbar__nav"><a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="industries.html">Industries</a><a href="blogs.html">Blog</a><a href="contact.html">Contact</a></nav>
+      <a href="index.html" class="navbar__logo" aria-label="Morfion Materials Inc Home">
+        <img src="MORFION.png" alt="Morfion Materials Inc" class="navbar__logo-img" />
+      </a>
+      <nav class="navbar__nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <div class="navbar__nav-item dropdown">
+          <a href="#" class="dropdown__trigger">
+            Services
+            <svg class="dropdown__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </a>
+          <div class="dropdown__menu">
+            <a href="service-ai-ml.html">AI/ML Materials Development</a>
+            <a href="service-failure-analysis.html">Failure Analysis</a>
+            <a href="service-testing-validation.html">Materials Testing</a>
+            <a href="service-characterization.html">Characterization</a>
+            <a href="service-development.html">Materials Development</a>
+            <a href="service-selection.html">Materials Selection</a>
+            <a href="service-optimization.html">Process Optimization</a>
+            <a href="service-3d-printing.html">Ceramic 3D Printing</a>
+          </div>
+        </div>
+        <div class="navbar__nav-item dropdown">
+          <a href="#" class="dropdown__trigger">
+            Industries
+            <svg class="dropdown__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </a>
+          <div class="dropdown__menu">
+            <a href="energy.html">Energy</a>
+            <a href="semiconductors.html">Semiconductors</a>
+            <a href="aerospace-defense.html">Aerospace & Defense</a>
+            <a href="industrial-manufacturing.html">Industrial Manufacturing</a>
+            <a href="chemical-processing.html">Chemical Processing</a>
+            <a href="medical-bioceramics.html">Medical & Bioceramics</a>
+            <a href="environmental.html">Environmental</a>
+          </div>
+        </div>
+        <a href="blogs.html">Blog</a>
+        <a href="contact.html">Contact</a>
+      </nav>
       <a href="contact.html" class="btn btn-primary navbar__cta">Request Consultation</a>
+      <button id="hamburger" class="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </header>
+  <nav id="mobile-menu" class="mobile-menu" aria-label="Mobile navigation">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <div class="mobile-menu__item">
+      <span class="mobile-menu__label">Services</span>
+      <div class="mobile-menu__dropdown">
+        <a href="service-ai-ml.html">AI/ML Development</a>
+        <a href="service-failure-analysis.html">Failure Analysis</a>
+        <a href="service-testing-validation.html">Testing & Validation</a>
+        <a href="service-characterization.html">Characterization</a>
+        <a href="service-development.html">Materials Development</a>
+        <a href="service-selection.html">Materials Selection</a>
+        <a href="service-optimization.html">Process Optimization</a>
+        <a href="service-3d-printing.html">Ceramic 3D Printing</a>
+      </div>
+    </div>
+    <div class="mobile-menu__item">
+      <span class="mobile-menu__label">Industries</span>
+      <div class="mobile-menu__dropdown">
+        <a href="energy.html">Energy</a>
+        <a href="semiconductors.html">Semiconductors</a>
+        <a href="aerospace-defense.html">Aerospace & Defense</a>
+        <a href="industrial-manufacturing.html">Industrial Manufacturing</a>
+        <a href="chemical-processing.html">Chemical Processing</a>
+        <a href="medical-bioceramics.html">Medical & Bioceramics</a>
+        <a href="environmental.html">Environmental</a>
+      </div>
+    </div>
+    <a href="blogs.html">Blog</a>
+    <a href="contact.html">Contact</a>
+    <a href="contact.html" class="btn btn-primary mt-2" style="text-align:center;">Request Consultation</a>
+  </nav>
+
   <main id="main-content">
-    <section class="page-hero" style="background: linear-gradient(rgba(3, 62, 140, 0.85), rgba(3, 62, 140, 0.85)), url('https://images.pexels.com/photos/2280571/pexels-photo-2280571.jpeg?auto=compress&cs=tinysrgb&w=1600'); background-size: cover;">
-      <div class="container"><span class="section-label">Industry Focus</span><h1>Environmental Applications</h1><p>Filtration, remediation, and catalytic support systems using advanced ceramic membranes and structures for a cleaner planet.</p></div>
+    <section class="page-hero" style="background: linear-gradient(rgba(3, 62, 140, 0.85), rgba(3, 62, 140, 0.85)), url('environmental-membranes.png'); background-size: cover; background-position: center;">
+      <div class="container">
+        <span class="section-label">Industry Focus</span>
+        <h1>Environmental Applications</h1>
+        <p>Filtration, remediation, and catalytic support systems using advanced ceramic membranes and structures for a cleaner planet.</p>
+      </div>
     </section>
+
     <section class="section">
       <div class="container">
         <div class="grid-2">
           <div class="fade-up">
-            <h2>Pioneering Clean Process Streams</h2>
-            <p>Advanced ceramics are at the forefront of environmental technology. From high temperature gas filtration to liquid phase separation using ceramic membranes, these materials provide the durability and precision required for sustainable industrial processes.</p>
+            <h2 class="mb-2">Pioneering Clean Process Streams</h2>
+            <p class="mb-2">Advanced ceramics are at the forefront of environmental technology. From high temperature gas filtration to liquid phase separation using ceramic membranes, these materials provide the durability and precision required for sustainable industrial processes.</p>
+            <p>Morfion delivers the expertise required to select, test, and optimize ceramic components for critical environmental infrastructure.</p>
           </div>
           <div class="industry-section__card industry-section__card--accent fade-up">
             <h4>Application Areas</h4>
@@ -38,18 +118,63 @@
         </div>
       </div>
     </section>
+
     <section class="cta-banner">
       <div class="container cta-banner__inner">
         <span class="section-label">Consultation</span>
         <h2>Designing for Sustainability?</h2>
+        <p>Speak directly with our engineering team about your specific materials challenges.</p>
         <div class="cta-banner__btns">
-          <a href="contact.html" class="btn btn-green">Request a Consultation</a>
+          <a href="contact.html" class="btn btn-green">Request a Technical Consultation</a>
           <a href="industries.html" class="btn btn-outline">Back to Industries</a>
         </div>
       </div>
     </section>
   </main>
-  <footer class="footer"><div class="container"><div class="footer__grid"><div class="footer__brand"><img src="MORFION.png" alt="Morfion Materials Inc" class="footer__logo-img" /><p class="footer__desc">Expert level ceramic materials science for industries where performance is non negotiable.</p></div></div><div class="footer__bottom"><p>&copy; 2025 Morfion Materials Inc.</p></div></div></footer>
+
+  <footer class="footer" role="contentinfo">
+    <div class="footer__top-accent" aria-hidden="true"></div>
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="index.html" class="footer__logo-link">
+            <img src="MORFION.png" alt="Morfion Materials Inc" class="footer__logo-img" />
+          </a>
+          <p class="footer__tagline">Advanced Ceramic Engineering</p>
+          <p class="footer__desc">Expert level ceramic materials science, from failure analysis to AI accelerated development, for industries where performance is non negotiable.</p>
+        </div>
+        <div>
+          <div class="footer__heading">Services</div>
+          <ul class="footer__links">
+            <li><a href="service-ai-ml.html">AI/ML Materials Development</a></li>
+            <li><a href="service-failure-analysis.html">Failure Analysis</a></li>
+            <li><a href="service-testing-validation.html">Materials Testing</a></li>
+            <li><a href="service-characterization.html">Characterization</a></li>
+            <li><a href="service-optimization.html">Process Optimization</a></li>
+            <li><a href="service-3d-printing.html">Ceramic 3D Printing</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer__heading">Company</div>
+          <ul class="footer__links">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="blogs.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer__heading">Contact</div>
+          <ul class="footer__links footer__links--contact">
+            <li><a href="mailto:info@morfionmaterials.com">info@morfionmaterials.com</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2025 Morfion Materials Inc. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
   <script src="script.js"></script>
 </body>
 </html>
