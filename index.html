@@ -22,8 +22,37 @@
       <nav class="navbar__nav" aria-label="Main navigation">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
-        <a href="services.html">Services</a>
-        <a href="industries.html">Industries</a>
+        <div class="navbar__nav-item dropdown">
+          <a href="#" class="dropdown__trigger">
+            Services
+            <svg class="dropdown__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </a>
+          <div class="dropdown__menu">
+            <a href="service-ai-ml.html">AI/ML Materials Development</a>
+            <a href="service-failure-analysis.html">Failure Analysis</a>
+            <a href="service-testing-validation.html">Materials Testing</a>
+            <a href="service-characterization.html">Characterization</a>
+            <a href="service-development.html">Materials Development</a>
+            <a href="service-selection.html">Materials Selection</a>
+            <a href="service-optimization.html">Process Optimization</a>
+            <a href="service-3d-printing.html">Ceramic 3D Printing</a>
+          </div>
+        </div>
+        <div class="navbar__nav-item dropdown">
+          <a href="#" class="dropdown__trigger">
+            Industries
+            <svg class="dropdown__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </a>
+          <div class="dropdown__menu">
+            <a href="energy.html">Energy</a>
+            <a href="semiconductors.html">Semiconductors</a>
+            <a href="aerospace-defense.html">Aerospace & Defense</a>
+            <a href="industrial-manufacturing.html">Industrial Manufacturing</a>
+            <a href="chemical-processing.html">Chemical Processing</a>
+            <a href="medical-bioceramics.html">Medical & Bioceramics</a>
+            <a href="environmental.html">Environmental</a>
+          </div>
+        </div>
         <a href="blogs.html">Blog</a>
         <a href="contact.html">Contact</a>
       </nav>
@@ -38,8 +67,31 @@
   <nav id="mobile-menu" class="mobile-menu" aria-label="Mobile navigation">
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
-    <a href="services.html">Services</a>
-    <a href="industries.html">Industries</a>
+    <div class="mobile-menu__item">
+      <span class="mobile-menu__label">Services</span>
+      <div class="mobile-menu__dropdown">
+        <a href="service-ai-ml.html">AI/ML Development</a>
+        <a href="service-failure-analysis.html">Failure Analysis</a>
+        <a href="service-testing-validation.html">Testing & Validation</a>
+        <a href="service-characterization.html">Characterization</a>
+        <a href="service-development.html">Materials Development</a>
+        <a href="service-selection.html">Materials Selection</a>
+        <a href="service-optimization.html">Process Optimization</a>
+        <a href="service-3d-printing.html">Ceramic 3D Printing</a>
+      </div>
+    </div>
+    <div class="mobile-menu__item">
+      <span class="mobile-menu__label">Industries</span>
+      <div class="mobile-menu__dropdown">
+        <a href="energy.html">Energy</a>
+        <a href="semiconductors.html">Semiconductors</a>
+        <a href="aerospace-defense.html">Aerospace & Defense</a>
+        <a href="industrial-manufacturing.html">Industrial Manufacturing</a>
+        <a href="chemical-processing.html">Chemical Processing</a>
+        <a href="medical-bioceramics.html">Medical & Bioceramics</a>
+        <a href="environmental.html">Environmental</a>
+      </div>
+    </div>
     <a href="blogs.html">Blog</a>
     <a href="contact.html">Contact</a>
     <a href="contact.html" class="btn btn-primary mt-2" style="text-align:center;">Request Consultation</a>
@@ -425,7 +477,6 @@
               <div class="why-card__icon">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
               </div>
-              <span class="why-card__num">01</span>
             </div>
             <h4>Ceramic Specialization</h4>
             <p>We focus exclusively on advanced ceramics giving clients a depth of expertise that no generalist materials firm can match.</p>
@@ -437,7 +488,6 @@
               <div class="why-card__icon">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
               </div>
-              <span class="why-card__num">02</span>
             </div>
             <h4>AI-Powered Methodology</h4>
             <p>Machine learning models integrated into our development workflow accelerate materials discovery and reduce iteration cycles.</p>
@@ -449,7 +499,6 @@
               <div class="why-card__icon">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
               </div>
-              <span class="why-card__num">03</span>
             </div>
             <h4>Full-Spectrum Support</h4>
             <p>From material selection through failure diagnosis and process optimization one integrated team, complete lifecycle coverage.</p>
@@ -461,7 +510,6 @@
               <div class="why-card__icon">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
               </div>
-              <span class="why-card__num">04</span>
             </div>
             <h4>Rigorous Validation</h4>
             <p>All testing and characterization follows traceable, reproducible protocols benchmarked against international standards.</p>
@@ -473,7 +521,6 @@
               <div class="why-card__icon">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
               </div>
-              <span class="why-card__num">05</span>
             </div>
             <h4>Industry Alignment</h4>
             <p>We understand the regulatory, safety, and performance demands of aerospace, defence, medical, and energy markets.</p>
@@ -485,7 +532,6 @@
               <div class="why-card__icon">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
               </div>
-              <span class="why-card__num">06</span>
             </div>
             <h4>Additive Manufacturing</h4>
             <p>Ceramic 3D printing for complex geometries and rapid prototyping impractical or impossible with conventional forming methods.</p>

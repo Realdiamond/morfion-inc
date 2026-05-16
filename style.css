@@ -372,6 +372,106 @@ p {
   margin-left: 1rem;
 }
 
+/* Dropdown Styles */
+.navbar__nav-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.dropdown__trigger {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  cursor: pointer;
+}
+
+.dropdown__menu {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(10px);
+  background: var(--brand-primary);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-sm);
+  padding: 0.75rem;
+  min-width: 240px;
+  opacity: 0;
+  visibility: hidden;
+  transition: var(--transition);
+  box-shadow: var(--shadow-lg);
+  z-index: 1001;
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar__nav-item:hover .dropdown__menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+
+.dropdown__menu a {
+  font-size: 0.8rem;
+  padding: 0.7rem 1rem;
+  border-radius: 4px;
+  white-space: nowrap;
+  transition: background 0.2s ease;
+}
+
+.dropdown__menu a:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--brand-highlight) !important;
+}
+
+.dropdown__menu a::after {
+  display: none;
+}
+
+.dropdown__arrow {
+  width: 12px;
+  height: 12px;
+  opacity: 0.7;
+  transition: transform var(--transition);
+}
+
+.navbar__nav-item:hover .dropdown__arrow {
+  transform: rotate(180deg);
+}
+
+/* Mobile Dropdown */
+.mobile-menu__item {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, .08);
+}
+
+.mobile-menu__label {
+  font-family: 'Montserrat', sans-serif;
+  font-size: .95rem;
+  font-weight: 600;
+  color: var(--brand-highlight);
+  margin-bottom: 0.75rem;
+}
+
+.mobile-menu__dropdown {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding-left: 1rem;
+}
+
+.mobile-menu__dropdown a {
+  font-size: 0.85rem !important;
+  font-weight: 500 !important;
+  border-bottom: none !important;
+  padding: 0 !important;
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+
 .hamburger {
   display: none;
   flex-direction: column;
