@@ -63,7 +63,7 @@
   const contactForm = document.getElementById('contact-form');
   if (contactForm) {
     const statusEl = document.getElementById('contact-form-status');
-    const accessKey = contactForm.dataset.web3formsAccessKey;
+    const endpoint = contactForm.dataset.formspreeEndpoint;
 
     contactForm.addEventListener('submit', async function (e) {
       e.preventDefault();
@@ -83,9 +83,9 @@
         statusEl.textContent = '';
       }
 
-      if (!accessKey || accessKey === 'YOUR_WEB3FORMS_ACCESS_KEY') {
+      if (!endpoint) {
         if (statusEl) {
-          statusEl.textContent = 'Form is not configured yet. Please add your Web3Forms access key.';
+          statusEl.textContent = 'Form is not configured yet. Please add your Formspree endpoint.';
           statusEl.style.color = '#b91c1c';
           statusEl.style.display = 'block';
         }
@@ -95,10 +95,9 @@
       }
 
       const payload = {
-        access_key: accessKey,
-        subject: `Contact Inquiry: ${getSelectedLabel('service') || 'General Consultation'}`,
-        from_name: `${formData.get('first_name') || ''} ${formData.get('last_name') || ''}`.trim() || 'Website Contact',
-        replyto: formData.get('email') || '',
+        _subject: `Contact Inquiry: ${getSelectedLabel('service') || 'General Consultation'}`,
+        name: `${formData.get('first_name') || ''} ${formData.get('last_name') || ''}`.trim() || 'Website Contact',
+        _replyto: formData.get('email') || '',
         first_name: formData.get('first_name') || '',
         last_name: formData.get('last_name') || '',
         email: formData.get('email') || '',
@@ -106,12 +105,11 @@
         phone: formData.get('phone') || '',
         service: getSelectedLabel('service') || '',
         industry: getSelectedLabel('industry') || '',
-        message: formData.get('message') || '',
-        to_email: 'morfionmaterials@gmail.com'
+        message: formData.get('message') || ''
       };
 
       try {
-        const response = await fetch('https://api.web3forms.com/submit', {
+        const response = await fetch(endpoint, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -121,8 +119,8 @@
         });
         const result = await response.json();
 
-        if (!response.ok || !result.success) {
-          throw new Error(result.message || 'Unable to send message right now.');
+        if (!response.ok || (typeof result.ok !== 'undefined' && !result.ok)) {
+          throw new Error(result.error || result.errors?.[0]?.message || 'Unable to send message right now.');
         }
 
         contactForm.reset();
