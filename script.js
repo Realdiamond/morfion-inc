@@ -62,34 +62,85 @@
   /* ---- Contact form submission ---- */
   const contactForm = document.getElementById('contact-form');
   if (contactForm) {
-    contactForm.addEventListener('submit', function (e) {
+    const statusEl = document.getElementById('contact-form-status');
+    const accessKey = contactForm.dataset.web3formsAccessKey;
+
+    contactForm.addEventListener('submit', async function (e) {
       e.preventDefault();
       const btn = contactForm.querySelector('button[type="submit"]');
       btn.textContent = 'Sending…';
       btn.disabled = true;
 
       const formData = new FormData(contactForm);
-      const subject = `Contact Inquiry: ${formData.get('service') || 'General Consultation'}`;
-      const body = [
-        `First Name: ${formData.get('first_name') || ''}`,
-        `Last Name: ${formData.get('last_name') || ''}`,
-        `Business Email: ${formData.get('email') || ''}`,
-        `Company / Organization: ${formData.get('company') || ''}`,
-        `Phone Number: ${formData.get('phone') || ''}`,
-        `Service Area: ${formData.get('service') || ''}`,
-        `Industry: ${formData.get('industry') || ''}`,
-        '',
-        'Project Description:',
-        `${formData.get('message') || ''}`
-      ].join('\n');
+      const getSelectedLabel = (fieldId) => {
+        const select = document.getElementById(fieldId);
+        if (!select || select.selectedIndex < 0) return '';
+        return select.options[select.selectedIndex]?.text || '';
+      };
 
-      const mailtoUrl = `mailto:morfionmaterials@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-      window.location.href = mailtoUrl;
+      if (statusEl) {
+        statusEl.style.display = 'none';
+        statusEl.textContent = '';
+      }
 
-      setTimeout(() => {
+      if (!accessKey || accessKey === 'YOUR_WEB3FORMS_ACCESS_KEY') {
+        if (statusEl) {
+          statusEl.textContent = 'Form is not configured yet. Please add your Web3Forms access key.';
+          statusEl.style.color = '#b91c1c';
+          statusEl.style.display = 'block';
+        }
         btn.textContent = 'Send Message';
         btn.disabled = false;
-      }, 1200);
+        return;
+      }
+
+      const payload = {
+        access_key: accessKey,
+        subject: `Contact Inquiry: ${getSelectedLabel('service') || 'General Consultation'}`,
+        from_name: `${formData.get('first_name') || ''} ${formData.get('last_name') || ''}`.trim() || 'Website Contact',
+        replyto: formData.get('email') || '',
+        first_name: formData.get('first_name') || '',
+        last_name: formData.get('last_name') || '',
+        email: formData.get('email') || '',
+        company: formData.get('company') || '',
+        phone: formData.get('phone') || '',
+        service: getSelectedLabel('service') || '',
+        industry: getSelectedLabel('industry') || '',
+        message: formData.get('message') || '',
+        to_email: 'morfionmaterials@gmail.com'
+      };
+
+      try {
+        const response = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            Accept: 'application/json'
+          },
+          body: JSON.stringify(payload)
+        });
+        const result = await response.json();
+
+        if (!response.ok || !result.success) {
+          throw new Error(result.message || 'Unable to send message right now.');
+        }
+
+        contactForm.reset();
+        if (statusEl) {
+          statusEl.textContent = 'Thanks! Your inquiry was sent successfully.';
+          statusEl.style.color = '#166534';
+          statusEl.style.display = 'block';
+        }
+      } catch (error) {
+        if (statusEl) {
+          statusEl.textContent = error.message || 'Something went wrong. Please try again.';
+          statusEl.style.color = '#b91c1c';
+          statusEl.style.display = 'block';
+        }
+      } finally {
+        btn.textContent = 'Send Message';
+        btn.disabled = false;
+      }
     });
   }
 
