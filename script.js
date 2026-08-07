@@ -68,20 +68,27 @@
       btn.textContent = 'Sending…';
       btn.disabled = true;
 
+      const formData = new FormData(contactForm);
+      const subject = `Contact Inquiry: ${formData.get('service') || 'General Consultation'}`;
+      const body = [
+        `First Name: ${formData.get('first_name') || ''}`,
+        `Last Name: ${formData.get('last_name') || ''}`,
+        `Business Email: ${formData.get('email') || ''}`,
+        `Company / Organization: ${formData.get('company') || ''}`,
+        `Phone Number: ${formData.get('phone') || ''}`,
+        `Service Area: ${formData.get('service') || ''}`,
+        `Industry: ${formData.get('industry') || ''}`,
+        '',
+        'Project Description:',
+        `${formData.get('message') || ''}`
+      ].join('\n');
+
+      const mailtoUrl = `mailto:morfionmaterials@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      window.location.href = mailtoUrl;
+
       setTimeout(() => {
-        contactForm.innerHTML = `
-          <div style="text-align:center;padding:3rem 1rem;">
-            <div style="width:60px;height:60px;border-radius:50%;background:rgba(34,197,94,.15);
-                 display:flex;align-items:center;justify-content:center;margin:0 auto 1.5rem;">
-              <svg width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="#22C55E" stroke-width="2.5">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
-              </svg>
-            </div>
-            <h3 style="color:#0A1628;margin-bottom:.5rem;">Message Received</h3>
-            <p style="color:#6B7280;max-width:380px;margin:0 auto;">
-              Thank you for reaching out. A member of our engineering team will respond within one business day.
-            </p>
-          </div>`;
+        btn.textContent = 'Send Message';
+        btn.disabled = false;
       }, 1200);
     });
   }
